@@ -1,0 +1,15 @@
+System.register(["jimu-core/emotion","jimu-core","jimu-ui"],function(e,t){var r={},o={},s={};return{setters:[function(e){r.jsx=e.jsx,r.jsxs=e.jsxs},function(e){o.DataSourceComponent=e.DataSourceComponent,o.DataSourceStatus=e.DataSourceStatus,o.css=e.css},function(e){s.Label=e.Label}],execute:function(){e((()=>{var e={244:e=>{"use strict";e.exports=o},321:e=>{"use strict";e.exports=s},386:e=>{"use strict";e.exports=r}},t={};function n(r){var o=t[r];if(void 0!==o)return o.exports;var s=t[r]={exports:{}};return e[r](s,s.exports,n),s.exports}n.d=(e,t)=>{for(var r in t)n.o(t,r)&&!n.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),n.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.p="";var a={};return n.p=window.jimuConfig.baseUrl,(()=>{"use strict";n.r(a),n.d(a,{__set_webpack_public_path__:()=>c,default:()=>s});var e=n(386),t=n(244),r=n(321),o=function(e,t,r,o){return new(r||(r=Promise))(function(s,n){function a(e){try{c(o.next(e))}catch(e){n(e)}}function i(e){try{c(o.throw(e))}catch(e){n(e)}}function c(e){var t;e.done?s(e.value):(t=e.value,t instanceof r?t:new r(function(e){e(t)})).then(a,i)}c((o=o.apply(e,t||[])).next())})};function s(s){function n(e){return o(this,void 0,void 0,function*(){if(!e||"string"!=typeof e)return"Invalid parcel id";const t="https://backend.artifexai.io/api/assessments/"+encodeURIComponent(e.trim())+"/";try{const e=yield fetch(t,{method:"GET",headers:{"X-API-Key":"75c5def3-0d8d-4d71-8424-da0f17ff8e10","Content-Type":"application/json"}});if(!e.ok)return`Error: ${e.status} ${e.statusText}`;const r=yield e.json();return JSON.stringify(r)}catch(e){return`Error fetching parcel data: ${e.message}`}})}return s.useDataSources&&1===s.useDataSources.length?(0,e.jsxs)("div",{className:"widget-listen-selection-change",css:i,children:[(0,e.jsx)("h3",{children:"Widget shows API result for selected parcel."}),(0,e.jsx)(t.DataSourceComponent,{useDataSource:s.useDataSources[0],query:{where:"1=1"},widgetId:s.id,children:(o,s)=>(0,e.jsx)("div",{className:"selected-records-api-result",children:o&&o.getStatus()===t.DataSourceStatus.Loaded?o.getSelectedRecords().map(t=>(0,e.jsx)(r.Label,{size:"default",children:n(t.getFieldValue("MAP_PAR_ID"))},t.getId())):(0,e.jsx)("div",{children:"Loading..."})})})]}):(0,e.jsxs)("h3",{children:["Widget shows API result for selected parcel.",(0,e.jsx)("br",{}),"Please configure the data source."]})}const i=t.css`
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+  overflow: auto;
+  .blue-border {
+    border: 1px solid var(--sys-color-primary-main);
+  }
+  .record-list {
+    width: 100%;
+    margin-top: 20px;
+    height: calc(100% - 80px);
+    overflow: auto;
+  }
+`;function c(e){n.p=e}})(),a})())}}});
